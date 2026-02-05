@@ -1,0 +1,32 @@
+models:
+  ModelName:
+    name: 
+    args:
+      input_dim: 19
+
+dataset:
+  name: 
+  args:
+    path: /data
+
+
+modules:
+  name: 
+  args:
+    max_epochs: 2000
+    optimizer_config:
+      name: AdamW
+      args:
+        lr: 0.001
+        weight_decay: 0.0001
+    lr_scheduler_config:
+      name: 
+      args:
+    loss_type: l1
+    
+    
+output: /result/baseline
+batch_size: 512
+seed: 8888
+split_ratio: 0.8
+log_every_n_steps: 10
